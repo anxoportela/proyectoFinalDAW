@@ -1,0 +1,36 @@
+<!-- header -->
+<app-header></app-header>
+
+<!-- main -->
+<div class="container mt-3" style="max-width: 600px">
+  <div class="displayTable">
+    <div class="displayTableCell">
+      <div class="editBlock" *ngIf="authService.userData as user">
+        <div class="form-group">
+          <img src="{{(user.photoURL) ? user.photoURL : '/assets/img/dummy.png'}}" class="rounded mx-auto d-block"
+            alt="Imagen Perfil">
+        </div>
+        <div class="form-group">
+          <input class="form-control form-control-sm"
+            placeholder="{{(user.displayName) ? user.displayName : 'Nombre Usuario'}}" type="text" #nombre>
+        </div>
+        <div class="form-group">
+          <input class="form-control form-control-sm" placeholder="{{user.email}}" type="text" readonly>
+        </div>
+        <div class="form-group">
+          <input class="form-control form-control-sm" placeholder="Contraseña" type="password" #password>
+        </div>
+        <div class="form-group">
+          <input class="form-control form-control-sm"
+            placeholder="{{(user.photoURL) ? user.photoURL : 'URL imagen de usuario'}}" type="text" #imgUrl>
+        </div>
+        <div class="form-group">
+          <button class="btn btn-primary btn-sm btn-block">Guardar datos</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- footer -->
+<app-footer></app-footer>

@@ -1,0 +1,29 @@
+<!-- header -->
+<app-header></app-header>
+
+<!-- main -->
+<div class="container mb-4">
+<table class="table table-hover table-sm">
+    <thead class="thead-dark">
+        <tr>
+            <th *ngFor = "let column of headers">
+                {{column}}
+              </th>
+        </tr>    
+    </thead>
+
+    <tbody>
+        <tr *ngFor = "let datos of Datos; index as i ">
+            <td>{{ i }}</td>
+            <td>{{ datos.uid }}</td>
+            <td>{{ datos.displayName }}</td>
+            <td>{{ datos.email }}</td>
+            <td>{{ datos.roles }}</td>
+          </tr>
+    </tbody>
+
+</table>
+</div>
+
+<!-- footer -->
+<app-footer></app-footer>

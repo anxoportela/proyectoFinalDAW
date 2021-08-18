@@ -1,0 +1,122 @@
+[{
+    "id": 1,
+    "titulo": "Apartamento con vistas al mar",
+    "descripcion": "Apartamento con tres habitaciones, dos baños y unas espectaculares vistas al mar.",
+    "comunidad": "Galicia",
+    "tipo": "apartamento",
+    "valoracion": 4,
+    "wifi": true,
+    "desayuno":true,
+    "imagen": "https://via.placeholder.com/360x180?text=Imagen_1",
+    "anadido": "1 de febrero de 2021"
+
+  },
+  {
+    "id": 2,
+    "titulo": "Apartamento con vistas al mar",
+    "descripcion": "Apartamento con tres habitaciones, dos baños y unas espectaculares vistas al mar.",
+    "comunidad": "Galicia",
+    "tipo": "apartamento",
+    "valoracion": 4,
+    "wifi": true,
+    "desayuno":true,
+    "imagen": "https://via.placeholder.com/360x180?text=Imagen_2",
+    "anadido": "1 de febrero de 2021"
+  },
+  {
+    "id": 3,
+    "titulo": "Apartamento con vistas al mar",
+    "descripcion": "Apartamento con tres habitaciones, dos baños y unas espectaculares vistas al mar.",
+    "comunidad": "Galicia",
+    "tipo": "apartamento",
+    "valoracion": 4,
+    "wifi": true,
+    "desayuno":true,
+    "imagen": "https://via.placeholder.com/360x180?text=Imagen_3",
+    "anadido": "1 de febrero de 2021"
+  },
+  {
+    "id": 4,
+    "titulo": "Apartamento con vistas al mar",
+    "descripcion": "Apartamento con tres habitaciones, dos baños y unas espectaculares vistas al mar.",
+    "comunidad": "Galicia",
+    "tipo": "apartamento",
+    "valoracion": 4,
+    "wifi": true,
+    "desayuno":true,
+    "imagen": "https://via.placeholder.com/360x180?text=Imagen_4",
+    "anadido": "1 de febrero de 2021"
+  },
+  {
+    "id": 5,
+    "titulo": "Apartamento con vistas al mar",
+    "descripcion": "Apartamento con tres habitaciones, dos baños y unas espectaculares vistas al mar.",
+    "comunidad": "Galicia",
+    "tipo": "apartamento",
+    "valoracion": 4,
+    "wifi": true,
+    "desayuno":true,
+    "imagen": "https://via.placeholder.com/360x180?text=Imagen_5",
+    "anadido": "1 de febrero de 2021"
+  },
+  {
+    "id": 6,
+    "titulo": "Apartamento con vistas al mar",
+    "descripcion": "Apartamento con tres habitaciones, dos baños y unas espectaculares vistas al mar.",
+    "comunidad": "Galicia",
+    "tipo": "apartamento",
+    "valoracion": 4,
+    "wifi": true,
+    "desayuno":true,
+    "imagen": "https://via.placeholder.com/360x180?text=Imagen_6",
+    "anadido": "1 de febrero de 2021"
+  },
+  {
+    "id": 7,
+    "titulo": "Apartamento con vistas al mar",
+    "descripcion": "Apartamento con tres habitaciones, dos baños y unas espectaculares vistas al mar.",
+    "comunidad": "Galicia",
+    "tipo": "apartamento",
+    "valoracion": 4,
+    "wifi": true,
+    "desayuno":true,
+    "imagen": "https://via.placeholder.com/360x180?text=Imagen_7",
+    "anadido": "1 de febrero de 2021"
+  },
+  {
+    "id": 8,
+    "titulo": "Apartamento con vistas al mar",
+    "descripcion": "Apartamento con tres habitaciones, dos baños y unas espectaculares vistas al mar.",
+    "comunidad": "Galicia",
+    "tipo": "apartamento",
+    "valoracion": 4,
+    "wifi": true,
+    "desayuno":true,
+    "imagen": "https://via.placeholder.com/360x180?text=Imagen_8",
+    "anadido": "1 de febrero de 2021"
+  },
+  {
+    "id": 9,
+    "titulo": "Apartamento con vistas al mar",
+    "descripcion": "Apartamento con tres habitaciones, dos baños y unas espectaculares vistas al mar.",
+    "comunidad": "Galicia",
+    "tipo": "apartamento",
+    "valoracion": 4,
+    "wifi": true,
+    "desayuno":true,
+    "imagen": "https://via.placeholder.com/360x180?text=Imagen_9",
+    "anadido": "1 de febrero de 2021"
+  },
+  {
+    "id": 10,
+    "titulo": "Apartamento con vistas al mar",
+    "descripcion": "Apartamento con tres habitaciones, dos baños y unas espectaculares vistas al mar.",
+    "comunidad": "Galicia",
+    "tipo": "apartamento",
+    "valoracion": 4,
+    "wifi": true,
+    "desayuno":true,
+    "imagen": "https://via.placeholder.com/360x180?text=Imagen_10",
+    "anadido": "1 de febrero de 2021"
+  }
+]

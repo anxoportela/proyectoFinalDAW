@@ -1,0 +1,36 @@
+<!-- header -->
+<app-header></app-header>
+
+<!-- main -->
+<div class="container mt-5" style="max-width: 600px">
+  <div class="displayTable">
+    <div class="displayTableCell">
+      <div class="authBlock">
+        <h3>Inicio de sesión</h3>
+        <div class="formGroup">
+          <input type="text" class="form-control form-control-sm" placeholder="Correo eléctronico" #userName required>
+        </div>
+        <div class="formGroup">
+          <input type="password" class="form-control form-control-sm mt-2" placeholder="Contraseña" #userPassword
+            required>
+        </div>
+        <div class="formGroup d-flex justify-content-sm-center">
+          <input type="button" class="btn btn-primary btn-block btn-sm mt-2 mr-1" value="Iniciar sesión"
+            (click)="authService.SignIn(userName.value, userPassword.value)">
+            <button type="button" class="btn btn-secondary btn-block btn-sm ml-1 mt-2" (click)="authService.GoogleAuth()">
+              Iniciar sesión con Google
+            </button>
+        </div>
+        <div class="forgotPassword mt-2 d-flex justify-content-end">
+          <span routerLink="/recuperar">¿Olvidaste tu contraseña?</span>
+        </div>
+      </div>
+      <div class="redirectToLogin mt-2 d-flex justify-content-end">
+        <span>¿No estás registrado todavía?<span class="redirect" routerLink="/registro"> Regístrate aquí</span></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- footer -->
+<app-footer></app-footer>

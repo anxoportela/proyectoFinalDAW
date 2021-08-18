@@ -1,0 +1,12 @@
+.full-width-image {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  margin-left: -50vw;
+  margin-top: 48px;
+  margin-bottom: 20px;
+}
+
+.full-width-image img {
+ width: 100%;
+}

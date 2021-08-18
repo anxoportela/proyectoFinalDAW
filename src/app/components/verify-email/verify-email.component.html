@@ -1,0 +1,26 @@
+<!-- header -->
+<app-header></app-header>
+
+<!-- main -->
+<div class="container mt-5" style="max-width: 600px">
+  <div class="displayTable">
+    <div class="displayTableCell">
+      <div class="authBlock">
+        <h3>Gracias por registrarte</h3>
+        <div class="formGroup mt-2" *ngIf="authService.userData as user">
+          <p class="text-center">Un correo eléctronico de verificación ha sido enviado a
+            <strong>{{user.email}}</strong>.
+          </p>
+        </div>
+        <div class="formGroup mt-2">
+          <button type="button" class="btn btn-block btn-sm btn-primary" (click)="authService.SendVerificationMail()">
+            Reenviar correo electrónico
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- footer -->
+<app-footer></app-footer>
