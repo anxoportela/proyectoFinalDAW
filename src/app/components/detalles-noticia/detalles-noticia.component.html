@@ -23,7 +23,7 @@
             <img class="img-fluid" alt="100%x280" src="{{ DatoUnico.image }}">
             <div class="card-body">
               <h4 class="card-title">{{ DatoUnico.description }}</h4>
-              <p class="card-text">{{ DatoUnico.body}}</p>
+              <p class="card-text" [innerHTML]="DatoUnico.body"></p>
             </div>
             <div class="card-footer">
               <small class="text-muted">Añadido: {{ DatoUnico.published }} </small>
