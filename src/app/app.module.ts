@@ -29,6 +29,10 @@ import { VerifyEmailComponent } from './components/verify-email/verify-email.com
 import { AddNoticiaComponent } from './components/add-noticia/add-noticia.component';
 import { DetallesNoticiaComponent } from './components/detalles-noticia/detalles-noticia.component';
 import { ListaUsuariosComponent } from './components/lista-usuarios/lista-usuarios.component';
+import { AdminPanelComponent } from './components/admin-panel/admin-panel.component';
+import { TiendaComponent } from './components/tienda/tienda.component';
+import { AddItemComponent } from './components/add-item/add-item.component';
+import { DetallesItemComponent } from './components/detalles-item/detalles-item.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +52,10 @@ import { ListaUsuariosComponent } from './components/lista-usuarios/lista-usuari
     AddNoticiaComponent,
     DetallesNoticiaComponent,
     ListaUsuariosComponent,
+    AdminPanelComponent,
+    TiendaComponent,
+    AddItemComponent,
+    DetallesItemComponent,
   ],
   imports: [
     BrowserModule,

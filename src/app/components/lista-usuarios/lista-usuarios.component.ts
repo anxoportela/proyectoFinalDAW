@@ -10,7 +10,7 @@ import { map } from 'rxjs/operators';
 export class ListaUsuariosComponent implements OnInit {
 
   Datos: any = null;
-  headers = ["#", "Id", "Nombre", "eMail", "Rol"];
+  headers = ["#", "Id", "Nombre", "eMail"];
 
   constructor(private usuariosService: UsuariosService) { }
 

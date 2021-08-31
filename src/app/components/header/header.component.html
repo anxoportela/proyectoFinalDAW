@@ -31,10 +31,13 @@
                 <a class="nav-link" routerLink="/noticias">Noticias</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" routerLink="/add">Añadir noticia</a>
+                <a class="nav-link" routerLink="/tienda">Tienda</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" routerLink="/cpanel">Panel de Control</a>
+            </li>
+            <li class="nav-item" *ngIf="authService.isAdmin == true">
+                <a class="nav-link" routerLink="/adminpanel">Admin Panel</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" (click)="authService.SignOut()" routerLink="/inicio">Salir</a>

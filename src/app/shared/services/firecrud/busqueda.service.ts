@@ -23,8 +23,8 @@ export class StoreService {
     return this.busqRef.doc(id).valueChanges();
   }
 
-  getByName(name: string) {
-    return this.busqRef.doc(name).valueChanges();
+  getByDescription(description: string) {
+    return this.busqRef.doc(description).valueChanges();
   }
 
   getByTitle(title: string){

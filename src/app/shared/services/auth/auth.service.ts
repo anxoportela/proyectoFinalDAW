@@ -1,6 +1,6 @@
 import { Injectable, NgZone } from '@angular/core';
 import { User } from "../../models/firebase-auth";
-import { auth }  from 'firebase/app';
+import { auth } from 'firebase/app';
 import { AngularFireAuth } from "@angular/fire/auth";
 import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
 import { Router } from "@angular/router";
@@ -11,6 +11,7 @@ import { Router } from "@angular/router";
 
 export class AuthService {
   userData: any; // Guardar datos de usuario
+  uidAdmin = 'OpkH13ZM4Waambe67x0GKyPqqFD2';
 
   constructor(
     public afs: AngularFirestore,
@@ -40,7 +41,7 @@ export class AuthService {
           this.router.navigate(['cpanel']);
         });
         this.afs.firestore.doc('users/' + result.user.uid).get().then(docSnapshot => {
-          if(!docSnapshot.exists){
+          if (!docSnapshot.exists) {
             this.SetUserData(result.user);
           }
         })
@@ -62,26 +63,32 @@ export class AuthService {
 
   // Enviar email de verificación
   SendVerificationMail() {
-    return this.afAuth.currentUser.then( u => u.sendEmailVerification())
-    .then(() => {
-      this.router.navigate(['verificar']);
-    })
+    return this.afAuth.currentUser.then(u => u.sendEmailVerification())
+      .then(() => {
+        this.router.navigate(['verificar']);
+      })
   }
 
   // Resetear password
   ForgotPassword(passwordResetEmail) {
     return this.afAuth.sendPasswordResetEmail(passwordResetEmail)
-    .then(() => {
-      window.alert('Se ha reseteado tu contraseña, revisa tu correo.');
-    }).catch((error) => {
-      window.alert(error)
-    })
+      .then(() => {
+        window.alert('Se ha reseteado tu contraseña, revisa tu correo.');
+      }).catch((error) => {
+        window.alert(error)
+      })
   }
 
   // Comprobación de que el usuario se ha identificado
   get isLoggedIn(): boolean {
     const user = JSON.parse(localStorage.getItem('user'));
     return (user !== null && user.emailVerified !== false) ? true : false;
+  }
+
+  // Comprobación de que el usuario es admin
+  get isAdmin(): boolean {
+    const user = JSON.parse(localStorage.getItem('user'));
+    return (user.uid === this.uidAdmin) ? true : false;
   }
 
   // Login con Google
@@ -92,19 +99,19 @@ export class AuthService {
   // Función para identificarse con proveedores
   AuthLogin(provider) {
     return this.afAuth.signInWithPopup(provider)
-    .then((result) => {
-       this.ngZone.run(() => {
-        localStorage.setItem('user', JSON.stringify(result.user));
+      .then((result) => {
+        this.ngZone.run(() => {
+          localStorage.setItem('user', JSON.stringify(result.user));
           this.router.navigate(['cpanel']);
         })
         this.afs.firestore.doc('users/' + result.user.uid).get().then(docSnapshot => {
-          if(!docSnapshot.exists){
+          if (!docSnapshot.exists) {
             this.SetUserData(result.user);
           }
         })
-    }).catch((error) => {
-      window.alert(error)
-    })
+      }).catch((error) => {
+        window.alert(error)
+      })
   }
 
   /* Añadir usuarios a la base de datos firestore */

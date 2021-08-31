@@ -1,0 +1,23 @@
+<!-- header -->
+<app-header></app-header>
+
+<!-- main -->
+<div class="container mb-4">
+    <div class="row">
+        <div class="col-md-4 mx-auto my-5" *ngFor="let item of Datos">
+            <div class="card" [routerLink]="[ '/detalles-item',item.id]">
+                <img class="card-img-top" src="{{ item.image }}" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">{{item.title}}</h5>
+                    <p class="card-text" [innerHTML]="item.description"></p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">Precio: {{item.price}}</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- footer -->
+<app-footer></app-footer>
