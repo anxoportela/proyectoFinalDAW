@@ -134,6 +134,15 @@ export class AuthService {
     })
   }
 
+  EditUser(nombre,photo){
+    return this.afAuth.currentUser.then(user => {
+      user.updateProfile({
+        displayName: nombre,
+        photoURL: photo,
+      })
+    });
+  }
+
   // Salir
   SignOut() {
     return this.afAuth.signOut().then(() => {

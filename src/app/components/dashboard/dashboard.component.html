@@ -7,7 +7,7 @@
     <div class="displayTableCell">
       <div class="editBlock" *ngIf="authService.userData as user">
         <div class="form-group">
-          <img src="{{(user.photoURL) ? user.photoURL : '/assets/img/dummy.png'}}" class="rounded mx-auto d-block"
+          <img src="{{(user.photoURL) ? user.photoURL : '/assets/img/dummy.png'}}" class="rounded mx-auto d-block card-img-top"
             alt="Imagen Perfil">
         </div>
         <div class="form-group">
@@ -24,8 +24,8 @@
           <input class="form-control form-control-sm"
             placeholder="{{(user.photoURL) ? user.photoURL : 'URL imagen de usuario'}}" type="text" #imgUrl>
         </div>
-        <div class="form-group">
-          <button class="btn btn-primary btn-sm btn-block">Guardar datos</button>
+        <div class="form-group mb-5">
+          <button class="btn btn-primary btn-sm btn-block" (click)="authService.EditUser(nombre.value,imgUrl.value)">Guardar datos</button>
         </div>
       </div>
     </div>
